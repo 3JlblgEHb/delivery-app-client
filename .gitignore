@@ -1,0 +1,20 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# .env files (например, для хранения конфиденциальных данных)
+.env
+
+# Папка с скомпилированными файлами (если используете TypeScript)
+dist/
+
+# Прочее
+.DS_Store
+*.swp
