@@ -1,11 +1,8 @@
 import Loader from "@/components/ui/Loader"
-import { useTypedNavigation } from "@/hock/useTypedNavigation"
-import { TypeRootStackParamList } from "@/navigation/navogation.type"
 import { IAuthFormData } from "@/types/auth.interface"
-import { useNavigation } from "@react-navigation/native"
 import { FC, useState } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
-import { Text, View, TextInput } from "react-native"
+import { Text, View, TextInput, Pressable } from "react-native"
 import Button from "../../ui/button/Button"
 
 
@@ -33,6 +30,16 @@ const Auth: FC = () => {
                 <Button onPress={handleSubmit(onSubmit)}>
                     {isReg ? "Sign Up" : "Login"}
                     </Button> 
+
+                    <Pressable onPress={ ()=> setIsReg(!isReg)}>
+                        <Text className="text-black text-center text-base mt-6">
+                            {isReg? "Already have an account ?" : "Don't have an account ?"}
+                            <Text className="text-[#47AA52]">
+                                {isReg? "Login" : "Sign up"}
+                            </Text>
+                        </Text>
+
+                    </Pressable>
                     </>
                 )}
             </View>
