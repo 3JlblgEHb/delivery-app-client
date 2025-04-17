@@ -8,7 +8,7 @@ yarn-error.log
 
 # Logs
 *.log
-
+package-lock.json
 # .env files (например, для хранения конфиденциальных данных)
 .env
 
